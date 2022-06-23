@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import './bootstrap.css'
+import { useState } from 'react';
+import Readme from './components/Readme';
+import ReadmeOutput from './components/ReadmeOutput';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [projects, updateProject] = useState([]);
+
+  const addProject = (projectInfo) => {
+    updateProject([...projects, projectInfo]);
+  }
+  //console.log(projects);
+    return (
+      <div>
+        <Readme addProject={addProject} />
+        <ReadmeOutput projects={projects} />
+      </div>
+        
+    );
 }
 
 export default App;
