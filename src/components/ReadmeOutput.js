@@ -28,7 +28,7 @@ function ReadmeOutput({projects}) {
                 <p>{project.pcollaborators}</p>
 
                 <p className='fw-bold'>## License</p>
-                <p>This code is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target='_blank'>CC BY-NC 4.0</a>.</p>
+                <p>This code is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).</p>
                  </div>
                 
 
