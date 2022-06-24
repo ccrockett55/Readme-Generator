@@ -1,28 +1,38 @@
 import React, { useState } from 'react';
 import './readme.css';
+import Footer from './Footer';
 
 
 
 export default function Readme({addProject}) {
    
-    const [projectInfo, setProjectInfo] = useState({
+    const [projectInfo, setProjectInfo, setIsChecked, isChecked] = useState({
         ptitle: "",
-        pdescription: ""
+        pdescription: "",
+        pcontents: "",
+        prun: "",
+        pusage: "",
+        pcollaborators: "",
+        pcheck: ""
+
     });
 //allows data to be entered into fields
-    const handleChange = (event) => {
+    const handleChange = (event) => {      
         setProjectInfo({...projectInfo, [event.target.name]: event.target.value});
     
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        addProject(projectInfo);        
-        setProjectInfo({ptitle: "", pdescription: "", pcontents: "", prun: "", usage: "", pcollaborators: ""});
+        addProject(projectInfo);  
+//clear fields once submit is clicked                
+//        setProjectInfo({ptitle: "", pdescription: "", pcontents: "", prun: "", pusage: "", pcollaborators: ""});
        
         }
-
     
+    
+    
+
     return (
     <div className='container'>
         <p className='title-style'>ReadMe File Generator</p>
@@ -41,7 +51,7 @@ export default function Readme({addProject}) {
         <div className='mb-3'>
             <label className='form-label label-title'>Table of Contents (optional)</label>
             <p className='label-text'>If your project has a bunch of content to read through, consider adding a table of contents to 
-                                        make it easier for your users to cruise through.</p>
+                                        make it easier for your users to cruise through. Create a new line for each entry.</p>
             <textarea type='text' name='pcontents' className='form-control' value={projectInfo.pcontents} onChange={handleChange} row='3' />
             
         </div>
@@ -60,12 +70,7 @@ export default function Readme({addProject}) {
             <p className='label-text'>List anyone you would like to give a shoutout to that also worked on this project.</p>
             <textarea type='text' name='pcollaborators' className='form-control' value={projectInfo.pcollaborators} onChange={handleChange} row='3' />
         </div>
-        <div className='form-check'>
-            <input className="form-check-input" type="checkbox" />
-            <label className="form-check-label">
-             Add License jargon (This lets other developers know what they can or cannot do with your project).
-            </label> <br /><br />
-        </div>
+     
         <button type='submit' className='btn btn-primary'>Create Readme File</button> 
         <br /><br />
      </form>
