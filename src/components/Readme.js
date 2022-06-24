@@ -35,7 +35,7 @@ export default function Readme({addProject}) {
 
     return (
     <div className='container'>
-        <p className='title-style'>ReadMe File Generator</p>
+        <p className='title-style'>README File Generator</p>
      <form  onSubmit={handleSubmit}>
         <div className='mb-3'>
             <label className='form-label label-title'>Project Title</label>
@@ -71,7 +71,7 @@ export default function Readme({addProject}) {
             <textarea type='text' name='pcollaborators' className='form-control' value={projectInfo.pcollaborators} onChange={handleChange} row='3' />
         </div>
      
-        <button type='submit' className='btn btn-primary'>Create Readme File</button> 
+        <button type='submit' className='btn btn-primary'>Create README File</button> 
         <br /><br />
      </form>
      </div>
