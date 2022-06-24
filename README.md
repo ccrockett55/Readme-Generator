@@ -14,6 +14,8 @@ I created this generator because as a someone still fairly new to software devel
 
 Just fill out each field in the form that pertains to your project and click the Create README File button. Your README document will appear below the button. Just copy and paste into your project's README file.
 
+![readgen](./public/images/readgen.png)
+
 ## License
 
 This code is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
