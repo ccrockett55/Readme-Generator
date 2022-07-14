@@ -18,4 +18,4 @@ Just fill out each field in the form that pertains to your project and click the
 
 ## License
 
-This code is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+This code is licensed under [MIT](https://choosealicense.com/licenses/mit/).
